@@ -1,1 +1,2 @@
-# useTimer
+# useTimer - Typescript / React
+

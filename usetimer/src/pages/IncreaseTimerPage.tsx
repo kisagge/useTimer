@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import useTimer from "../hooks/useTimer";
 
-const MAX_COUNT = 10;
+const MAX_COUNT = 0;
 
 const IncreaseTimerPage = () => {
   // Increase Timer State
@@ -28,6 +28,7 @@ const IncreaseTimerPage = () => {
   const [iResetBtnState, setIResetBtnState] = useState<boolean>(false);
   // Increase Timer button handle
   const handleIncreaseTimerStartClick = () => {
+    if (iCount === MAX_COUNT) return;
     iStart();
     setIStartBtnState(false);
     setIStopBtnState(true);
